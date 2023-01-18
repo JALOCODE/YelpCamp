@@ -27,7 +27,7 @@ const {isAuthor, isLoggedIn} = require('./middleware')
 const MongoStore = require("connect-mongo");
 
 
-const dbUrl = 'mongodb://127.0.0.1/yelp-camp';
+const dbUrl = process.env.DB_URL || 'process.env.PORT';
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
